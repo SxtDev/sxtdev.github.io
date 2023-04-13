@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "anonym";
+    src: url("fonts/Anonymous-Pro/Anonymous_Pro.ttf") format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "anonym";
+    src: url("fonts/Anonymous-Pro/Anonymous_Pro_I.ttf") format(truetype);
+    font-style: italic;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "anonym";
+    src: url("fonts/Anonymous-Pro/Anonymous_Pro_B.ttf") format(truetype);
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "anonym";
+    src: url("fonts/Anonymous-Pro/Anonymous_Pro_BI.ttf") format(truetype);
+    font-style: italic;
+    font-weight: bold;
+}
+@font-face {
+    font-family: "3dumb";
+    src: url("fonts/3dumb/3Dumb.ttf") format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}

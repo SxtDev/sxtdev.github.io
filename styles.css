@@ -1,0 +1,253 @@
+/* DEFINITIONS DES VARIABLES ET RESET*/
+:root{
+    --marron : rgb(63, 56, 50);
+    --beige : rgb(255, 246, 225);
+    --beige-f : rgb(255, 236, 191);
+    --gris : rgb(192, 185, 165);
+    --gris2 : rgb(255, 197, 38);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a, a:visited{
+    color: inherit;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+html{
+    background-color: var(--marron);
+    font-family: 'anonym';
+    font-size: 14px;
+}
+body>*{
+    background-color: var(--beige);
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    gap: 3px;
+    grid-template-columns: auto 30%;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+/* en-tête */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
+h1, h2, h3{
+    font-family: '3dumb';
+    font-weight: normal;
+}
+h1{
+    font-size: 3em;
+}
+h2{
+    font-size: 1.5em;
+}
+header p{
+    font-weight: bold;
+    max-width: 95%;
+}
+header span{
+    display: block;
+    font-size: 1.2em;
+    font-style: normal;
+    margin: 0.1em auto;
+}
+header strong{
+    text-decoration: underline 2px solid var(--gris);
+}
+
+/* illustration */
+body>figure{
+    grid-row: 1 / 3;
+}
+body>figure>img{
+    object-fit: cover;
+    max-width: 100%;
+    min-height: 100%;
+}
+
+/* barre de navigation */
+nav{
+    grid-row: 3 / 4;
+    max-width: 35vw;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+menu{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    min-height: 60%;
+}
+menu li{
+    cursor: pointer;
+    margin: 3px 0;
+}
+menu li[class*='actif']{
+    color: var(--gris);
+}
+.modes{
+    width: 3em;
+    height: 8px;
+    background-color: black;
+    margin-bottom: 7px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* contenu principal */
+main{
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+}
+section{
+    display: none;
+    padding: 10px;
+    text-align: center;
+}
+section[class*='actif']{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.real{
+    text-align: center;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    max-height: 450px;
+}
+.cards>a{
+    display: block;
+    text-decoration: none;
+    background-color: var(--beige-f);
+    border-radius: 5px;
+    padding: 4px;
+    margin-bottom: 4px;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid var(--beige-f);
+}
+.cards>a:hover{
+    border: 2px dashed var(--marron);
+}
+.real h3{
+    display: inline-block;
+    vertical-align: top;
+}
+.real>p{
+    margin: 1em auto 0.5em;
+}
+.real img{
+    display: inline-block;
+    width: 25px;
+}
+.real span{
+    display: inline-block;
+    background-color: var(--gris);
+    padding: 3px;
+    border-radius: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    font-size: 10px;
+}
+.real .encours{
+    background-color: var(--gris2);
+}
+.real article>p{
+    display: none;
+}
+
+@media (min-height: 900px) or (min-width: 700px){
+    .real article>p{
+        display: block;
+    }
+    h2{
+        font-size: 2em;
+    }
+    h3{
+        font-size: 1.5em;
+    }
+    .real img{
+        width: 40px;
+    }
+}
+@media (max-width: 320px) or (max-height: 300px){
+    body{
+        font-size: 12px;
+    }
+}
+@media (max-aspect-ratio: 660/1000){
+
+    nav{
+        min-height: 40vh;
+    }
+}
+@media (min-aspect-ratio: 500/420){
+
+    body{
+        grid-template-columns: auto 25%;
+    }
+}
+@media (min-aspect-ratio: 500/420) and (min-width: 1000px){
+    header{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    h1{
+        font-size: 4em;
+    }
+    header>p{
+        max-width: 50%;
+    }
+}
+@media (min-aspect-ratio: 1000/600){
+
+    body{
+        grid-template-columns: auto 20%;
+    }
+}
+@media (min-aspect-ratio: 1000/500){
+
+    body{
+        grid-template-columns: auto 15%;
+    }
+    header{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    h1{
+        font-size: 3em;
+    }
+    header>p{
+        max-width: 70%;
+    }
+}
+@media (min-aspect-ratio: 1000/420){
+
+    body{
+        grid-template-columns: auto 10%;
+    }
+}
