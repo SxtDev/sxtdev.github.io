@@ -1,0 +1,29 @@
+/* ///// STYLES FOOTER ///// */
+footer{
+    padding: 1em;
+    text-align: center;
+}
+footer *{
+    font-size: 10px;
+    line-height: initial;
+    text-align:left;
+}
+footer h2{
+    font-size: 1.5em;
+    color: var(--dark);
+}
+.certif{
+    width: fit-content;
+    margin: 0 auto;
+}
+.certif img{
+    height: 6em;
+    display: inline-block;
+    margin: 0 15px;
+}
+footer section:first-child{
+    text-align: center;
+}
+.certif ~ p{
+    text-align: center;
+}
